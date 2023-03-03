@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main_3_2 {
 
     public static int  max2(int a, int b) {
         if (a > b) {
