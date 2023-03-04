@@ -32,7 +32,7 @@ public class Main_3_4 {
     public static void adjust_eve(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
-        for (; left < arr.length; left++) {
+        while (left < right) {
             if (arr[left] % 2 == 0) {
                 for (; right > left; right--) {
                     if (arr[right] % 2 != 0) {
@@ -43,10 +43,11 @@ public class Main_3_4 {
                     }
                 }
             }
+            left++;
         }
     }
 
-    public static void main3(String[] args) {
+    public static void main(String[] args) {
         int[] array = new int[]{9, 8, 2, 1, 2, 3, 4, 5, 6};
         adjust_eve(array);
         System.out.println(Arrays.toString(array));
@@ -160,7 +161,7 @@ public class Main_3_4 {
         }
         return false;
     }
-    public static void main(String[] args) {
+    public static void main8(String[] args) {
         int[] arr = {1,2,34,3,4,5,7,23,12};
         //int[] arr = {2,4,6,1};
         boolean ret = conOdd(arr);
