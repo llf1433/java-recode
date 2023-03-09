@@ -59,7 +59,8 @@ public class Book {
                 "name = '" + name + '\'' +
                 ",author = '" + author + '\'' +
                 ",price = '" + price + '\'' +
-                ",isBorrow = '" + isBorrow + '\''
+                ",type = '" + type + '\'' +
+                ( !isBorrow  ? ",未借出" : ",已借出") + '\''
                 + '}';
     }
 }
