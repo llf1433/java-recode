@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class MyArrayList {
     private int[] elem;//数组
     private int usedSize;//使用长度
-    static final int DEFAULT_SIZE = 10;
+    static final int DEFAULT_SIZE = 5;
 
     //无参构造
     public MyArrayList() {
@@ -93,11 +93,39 @@ public class MyArrayList {
             System.out.println("没有找到这个关键字！");
             return;
         }
-        for (int j = index; j < this.size() - 1; j++) {
+        for (int j = index; j <= this.size() - 1; j++) {
             this.elem[j] = this.elem[j + 1];
         }
        this.usedSize--;
     }
+
+    public int removeElement(int val) {
+        int ret = this.usedSize;
+        for (int i = 0; i < ret; i++) {
+            if (elem[i] == val) {
+                for (int j = i; j <= ret - 1; j++) {
+                    elem[j] = elem[j + 1];
+                }
+                i--;
+                ret -= 1;
+            }
+        }
+        return ret;
+    }
+
+    public int removeDuplicates() {
+        int low = 0;
+        int high = 1;
+        while (high < elem.length) {
+            if (elem[low] != high && high - low > 1) {
+                elem[low + 1] = elem[high];
+                low++;
+            }
+            high++;
+        }
+        return low+1;
+    }
+    
 
     //清除顺序表
     public void clear() {

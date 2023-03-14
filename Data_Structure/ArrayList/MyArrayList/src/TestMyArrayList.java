@@ -1,5 +1,5 @@
 public class TestMyArrayList {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         MyArrayList myArrayList = new MyArrayList();
         myArrayList.add(99);
         myArrayList.add(100);
@@ -16,7 +16,7 @@ public class TestMyArrayList {
         }
         myArrayList.display();
         try {
-            myArrayList.remove(999);
+            myArrayList.remove(101);
         } catch (EmptyException e) {
             System.out.println(e.getMessage());
             throw new RuntimeException();
@@ -26,5 +26,20 @@ public class TestMyArrayList {
         myArrayList.clear();
         myArrayList.display();
         System.out.println(myArrayList.isEmpty());
+    }
+
+    public static void main(String[] args) {
+        MyArrayList myArrayList = new MyArrayList();
+        myArrayList.add(1);
+        myArrayList.add(1);
+        myArrayList.add(2);
+        myArrayList.add(2);
+        myArrayList.add(3);
+        myArrayList.display();
+        //int ls = myArrayList.removeElement(3);
+        int ls = myArrayList.removeDuplicates();
+        myArrayList.display();
+        System.out.println(ls);
+
     }
 }
