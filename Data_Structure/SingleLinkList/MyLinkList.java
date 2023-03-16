@@ -3,7 +3,7 @@ import java.util.List;
 public class MyLinkList {
     public static class ListNode {
         protected int value;//值
-        private ListNode next;//指向下一个结点
+        protected ListNode next;//指向下一个结点
 
         public ListNode() {
 
@@ -128,8 +128,38 @@ public class MyLinkList {
         return null;
     }
 
+    //删除所有等于key的结点
+    public void removeAllKey(int key) {
+        if (head == null) {
+            return;
+        }
+        while (head.value == key) {
+            head = head.next;
+        }
+        ListNode cur = head.next;
+        ListNode prev = head;
+        while (cur != null) {
+            if (cur.value == key) {
+                prev.next = cur.next;
+                cur = cur.next;
+            } else {
+                prev = cur;
+                cur = cur.next;
+            }
+        }
+    }
+
     //打印链表
     public void display() {
+        ListNode cur = head;
+        while (cur != null) {
+            System.out.print(cur.value + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
+    public void display(ListNode head) {
         ListNode cur = head;
         while (cur != null) {
             System.out.print(cur.value + " ");
@@ -149,6 +179,9 @@ public class MyLinkList {
         return count;
     }
 
-
+    //清除链表
+    public void clear() {
+        this.head = null;//暴力解
+    }
 
 }
