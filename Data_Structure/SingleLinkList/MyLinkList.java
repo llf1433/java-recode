@@ -88,6 +88,7 @@ public class MyLinkList {
         cur.next = null;
     }
 
+    //找到最后一个的前一个结点
     private ListNode findLastPrevNode() {
         ListNode cur = head;
         //int frequency = this.size() - 1;
@@ -96,6 +97,35 @@ public class MyLinkList {
             //frequency--;
         }
         return cur;
+    }
+
+
+    //删除指定的值
+    public void remove(int key) {
+        if (head == null) {
+            return;
+        }
+        if (head.value == key) {
+            delFist();//头删
+            return;
+        }
+        ListNode cur = findPrevKey(key);
+        if (cur == null) {
+            System.out.println("找不到这个关键字！");
+            return;
+        }
+        cur.next = cur.next.next;
+    }
+
+    private ListNode findPrevKey(int key) {
+        ListNode cur = head;
+        while (cur.next != null) {
+            if (cur.next.value == key) {
+                return cur;
+            }
+            cur = cur.next;
+        }
+        return null;
     }
 
     //打印链表
