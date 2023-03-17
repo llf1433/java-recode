@@ -43,27 +43,39 @@ public class Test {
 
     }
 
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         MyLinkList list = new MyLinkList();
-        list.addFirst(100);
+        /*list.addFirst(100);
         list.addFirst(99);
-        list.addFirst(98);
+        list.addFirst(98);*/
+        list.addLast(99);
         list.addLast(999);
+        //list.addLast(1);
         list.addLast(999);
-        list.addLast(999);
-        list.addLast(999);
+        list.addLast(99);
+
         //list.display();
         //list.addIndex(2,114);
         //list.delLast();
         //list.remove(1111);
         list.removeAllKey(999);
-        System.out.println("长度：" + list.size());
 
-        list.display();
-        list.clear();
-        list.display();
-        //list.remove(98);
         System.out.println("长度：" + list.size());
+        /*list.display();
+        list.clear();
+        list.display();*/
+        //list.remove(98);
+        //System.out.println("长度：" + list.size());
+    }
+
+    public static void main(String[] args) {
+        MyLinkList list = new MyLinkList();
+        list.addLast(99);
+        list.addLast(999);
+        //list.addLast(1);
+        list.addLast(999);
+        list.addLast(99);
+        System.out.println(list.chkPaindrome(list.head));
     }
 
 }

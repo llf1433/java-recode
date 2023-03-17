@@ -185,4 +185,68 @@ public class MyLinkList {
         this.head = null;//暴力解
     }
 
+
+
+    //判断是否存在循环(会改变链表)
+    public boolean chkPaindrome(MyLinkList.ListNode A) {
+        if (A == null) {
+            return false;
+        }
+        if (A.next == null) {
+            return true;
+        }
+        MyLinkList.ListNode fast = A;
+        MyLinkList.ListNode slow = A;
+
+        //寻找中间结点
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        MyLinkList.ListNode cur = slow.next;
+        while (cur != null) {
+            MyLinkList.ListNode curNext = cur.next;
+            cur.next = slow;
+            slow = cur;
+            cur = curNext;
+        }
+
+        MyLinkList.ListNode head = A;
+        while (head != slow) {
+            if (head.value  != slow.value) {
+                return false;
+            }
+
+            //偶数判断
+            if (head.next == slow) {
+                return true;
+            }
+            slow = slow.next;
+            head = head.next;
+        }
+        return true;
+    }
+
+    //寻找循环链表的入口点 --无环 return null
+    public ListNode detectCycle(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            //相遇
+            if (slow == fast) {
+                slow = head;
+                while (slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
+            }
+        }
+        return null;//无环
+    }
+
 }
