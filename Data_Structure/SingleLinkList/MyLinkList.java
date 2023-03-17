@@ -133,9 +133,7 @@ public class MyLinkList {
         if (head == null) {
             return;
         }
-        while (head.value == key) {
-            head = head.next;
-        }
+
         ListNode cur = head.next;
         ListNode prev = head;
         while (cur != null) {
@@ -145,6 +143,9 @@ public class MyLinkList {
             } else {
                 prev = cur;
                 cur = cur.next;
+            }
+            if(head.value == key) {
+                head = head.next;
             }
         }
     }
