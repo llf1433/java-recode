@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class BinaryTree {
@@ -125,6 +127,27 @@ public class BinaryTree {
         System.out.println();
     }
 
+    //分层遍历
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        List<List<Integer>> ret = new ArrayList<>();
+        if (root == null) return ret;
+        Queue<TreeNode> qu = new LinkedList<>();
+        qu.offer(root);
+        while (!qu.isEmpty()) {
+            int size = qu.size();
+            List<Integer> level = new ArrayList<>();
+            while (size > 0 && !qu.isEmpty()) {
+                TreeNode cur = qu.poll();
+                level.add(cur.value);//
+                size--;
+                if (cur.left != null) qu.offer(cur.left);
+                if (cur.right != null) qu.offer(cur.right);
+            }
+            ret.add(level);
+        }
+        return ret;
+    }
+
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
@@ -140,5 +163,8 @@ public class BinaryTree {
         System.out.println("树的高度" + binaryTree.getHeight(root));
         binaryTree.levelOrder(root);
         System.out.println(binaryTree.isExist(root,1));
+        System.out.println("=================");
+        List<List<Integer>> ret = binaryTree.levelOrder2(root);
+        System.out.println(ret);
     }
 }
