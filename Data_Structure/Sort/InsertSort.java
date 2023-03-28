@@ -1,6 +1,10 @@
 import java.util.Arrays;
-import java.util.Random;
-
+/**
+ *  插入排序
+ *  时间复杂度：O(n^2)
+ *  空间复杂度：O(1)
+ *  稳定性：稳定
+ */
 public class InsertSort {
     public static void sort(int[] array) {
         //第一个元素默认有序
@@ -20,14 +24,8 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        int n = 10_0000;
-        int[] array = new int[n];
-        Random random = new Random();
-        for (int i = 0; i < n; i++) {
-            array[i] = random.nextInt(n);
-        }
-        //int[] arr = {1, 3,2,0};
+        int[] array = new int[]{9,8,7,6,1,0};
         InsertSort.sort(array);
-        //System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
     }
 }

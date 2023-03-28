@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     //递归实现--
-    public static void quickSort(int[] array){
+    public static void sort(int[] array){
         quick(array,0, array.length - 1);
     }
     private static void quick(int[] array, int left, int right) {
@@ -44,7 +44,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] array = new int[]{5,4,1,2,1};
-        QuickSort.quickSort(array);
+        QuickSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }

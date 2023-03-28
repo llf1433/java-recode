@@ -6,7 +6,7 @@ import java.util.Arrays;
  *  稳定性：稳定
  */
 public class BubbleSort {
-    public static void bubbleSort(int[] array){
+    public static void sort(int[] array){
         //i 是趟数
         for (int i = 0; i < array.length; i++) {
             boolean flag = false;//标记
@@ -21,8 +21,8 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{9,8,7,6,1,0};
-        BubbleSort.bubbleSort(array);
+        int[] array = new int[]{3,2,3,4,5,6};
+        BubbleSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }

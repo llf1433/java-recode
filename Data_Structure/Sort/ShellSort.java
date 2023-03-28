@@ -6,7 +6,7 @@ import java.util.Arrays;
  *  稳定性：不稳定
  */
 public class ShellSort {
-    public static void shellSort(int[] array) {
+    public static void sort(int[] array) {
         int group = array.length;
         while (group > 1) {
             group /= 2;
@@ -35,7 +35,7 @@ public class ShellSort {
     }
     public static void main(String[] args) {
         int[] array = new int[]{9,8,7,6,1,0};
-        ShellSort.shellSort(array);
+        ShellSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }
