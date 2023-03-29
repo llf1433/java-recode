@@ -22,36 +22,39 @@ public class QuickSort {
         }
         //优化1：三数取中
         findMidKey(array, left, right);
+
         //System.out.println("left:" + array[left] + " mid:" + array[(left + right)/2] + " right" + array[right]);
-        int key = searchKey(array, left, right);
+
+        int key = partition(array, left, right);//Hoare法  ||  挖坑法
+
         quick(array, left, key - 1);
         quick(array, key + 1, right);
     }
 
+    /*
+        交换中间数 -- 三数取中
+     */
     private static void findMidKey(int[] array, int left, int right) {
         int mid = (left + right) / 2;
         if (array[left] > array[mid]) {
             if (array[right] > array[left]) {
                 return;
+            } else if (array[mid] > array[right]) {
+                SelectSort.swap(array,mid,left);
             } else {
-                if (array[mid] > array[right]) {
-                    SelectSort.swap(array,mid,left);
-                } else {
-                    SelectSort.swap(array,right,left);
-                }
+                SelectSort.swap(array,right,left);
             }
         } else { //left < mid
             if (array[left] > array[right]) {
                 return;
+            } else if (array[mid] > array[right]) {
+                SelectSort.swap(array,left,right);
             } else {
-                if (array[mid] > array[right]) {
-                    SelectSort.swap(array,left,right);
-                } else {
-                    SelectSort.swap(array,mid,left);
-                }
+                SelectSort.swap(array,mid,left);
             }
         }
     }
+
 
     public static void Insert(int[] array, int left, int right) {
         //第一个元素默认有序
@@ -70,8 +73,10 @@ public class QuickSort {
         }
     }
 
+
+
     //Hoare法
-    private static int searchKey(int[] array, int left, int right) {
+    private static int partition(int[] array, int left, int right) {
         int i = left;//基准下标 -- array[i] 为基准值
         while (left < right) {
             /*
@@ -89,6 +94,30 @@ public class QuickSort {
             SelectSort.swap(array, left,right);
         }
         SelectSort.swap(array, left, i);
+        return left;
+    }
+
+
+
+    //挖坑法
+    private static int partition2(int[] array, int left, int right) {
+        int pivot = array[left];//基准
+        while (left < right) {
+            /*
+                left < right 保证不会越界
+                如果是有序  left先走可能会使第一数与最后一个数交换
+             */
+            while (left < right && array[right] >= pivot) {
+                right--;
+            }
+            array[left] = array[right];//填旧坑 挖新坑
+            while (left < right && array[left] <= pivot) {
+                left++;
+            }
+            array[right] = array[left];//填旧坑 挖新坑
+        }
+        //相遇  填坑 -- 把基准值放入
+        array[left] = pivot;
         return left;
     }
 

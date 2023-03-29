@@ -68,6 +68,15 @@ public class TestSort {
         System.out.println("sort排序：" + (end - begin));
     }
 
+    public void testMergeSort(int[] array) {
+        array = Arrays.copyOf(array,array.length);
+        long begin = System.currentTimeMillis();
+        MergeSort.mergeSort(array);//归并排序
+        long end = System.currentTimeMillis();
+        System.out.println("归并排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
+    }
+
 
 
 
@@ -75,7 +84,7 @@ public class TestSort {
         /*
           10万个随机数
          */
-        int n = 10_0000;
+        int n = 100_0000;
         int[] array = new int[n];
         Random random = new Random();
         for (int i = 0; i < n; i++) {
@@ -84,14 +93,14 @@ public class TestSort {
         }
 
         TestSort testSort = new TestSort();
-        testSort.testBubbleSort(array);
-        testSort.testInsertSort(array);
-        testSort.testSelectSort(array);
-        /*testSort.testQuickSort(array);
+        //testSort.testBubbleSort(array);
+        //testSort.testInsertSort(array);
+        //testSort.testSelectSort(array);
+        testSort.testQuickSort(array);
         testSort.tSort(array);
         testSort.testShellSort(array);
-        testSort.testHeapSort(array);*/
-
+        testSort.testHeapSort(array);
+        testSort.testMergeSort(array);
 
     }
 
