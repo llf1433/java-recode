@@ -15,12 +15,62 @@ public class QuickSort {
         if (left >= right) {
             return;
         }
+        //优化2：递归一定层数 改用插入排序
+        if (right - left + 1 <= 7) {
+            Insert(array,left,right);
+            return;
+        }
+        //优化1：三数取中
+        findMidKey(array, left, right);
+        //System.out.println("left:" + array[left] + " mid:" + array[(left + right)/2] + " right" + array[right]);
         int key = searchKey(array, left, right);
         quick(array, left, key - 1);
         quick(array, key + 1, right);
     }
 
+    private static void findMidKey(int[] array, int left, int right) {
+        int mid = (left + right) / 2;
+        if (array[left] > array[mid]) {
+            if (array[right] > array[left]) {
+                return;
+            } else {
+                if (array[mid] > array[right]) {
+                    SelectSort.swap(array,mid,left);
+                } else {
+                    SelectSort.swap(array,right,left);
+                }
+            }
+        } else { //left < mid
+            if (array[left] > array[right]) {
+                return;
+            } else {
+                if (array[mid] > array[right]) {
+                    SelectSort.swap(array,left,right);
+                } else {
+                    SelectSort.swap(array,mid,left);
+                }
+            }
+        }
+    }
 
+    public static void Insert(int[] array, int left, int right) {
+        //第一个元素默认有序
+        for (int i = 1 + left; i <= right; i++) {
+            int tmp = array[i];
+            int j = i - 1;
+            while (j >= 0) {
+                if (array[j] > tmp) {
+                    array[j + 1] = array[j];
+                } else {
+                    break;
+                }
+                j--;
+            }
+            array[j + 1] = tmp;
+        }
+    }
+
+    //Hoare法
     private static int searchKey(int[] array, int left, int right) {
         int i = left;//基准下标 -- array[i] 为基准值
         while (left < right) {
@@ -39,11 +89,11 @@ public class QuickSort {
             SelectSort.swap(array, left,right);
         }
         SelectSort.swap(array, left, i);
-        return right;
+        return left;
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{5,4,1,2,1};
+        int[] array = new int[]{1,2,3,4,5,6,7,8};
         QuickSort.sort(array);
         System.out.println(Arrays.toString(array));
     }

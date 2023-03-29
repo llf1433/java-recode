@@ -9,6 +9,8 @@ public class TestSort {
         BubbleSort.sort(array);//冒泡排序
         long end = System.currentTimeMillis();
         System.out.println("冒泡排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
+
     }
 
     public void testHeapSort(int[] array) {
@@ -17,6 +19,7 @@ public class TestSort {
         HeapSort.sort(array);//堆排序
         long end = System.currentTimeMillis();
         System.out.println("堆排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
     }
 
     public void testInsertSort(int[] array) {
@@ -25,6 +28,7 @@ public class TestSort {
         InsertSort.sort(array);//插入排序
         long end = System.currentTimeMillis();
         System.out.println("插入排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
     }
 
     public void testQuickSort(int[] array) {
@@ -33,6 +37,8 @@ public class TestSort {
         QuickSort.sort(array);//快速排序
         long end = System.currentTimeMillis();
         System.out.println("快速排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
+
     }
 
     public void testSelectSort(int[] array) {
@@ -41,6 +47,8 @@ public class TestSort {
         SelectSort.sort(array);//选择排序
         long end = System.currentTimeMillis();
         System.out.println("选择排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
+
     }
 
     public void testShellSort(int[] array) {
@@ -49,6 +57,15 @@ public class TestSort {
         ShellSort.sort(array);//希尔排序
         long end = System.currentTimeMillis();
         System.out.println("希尔排序：" + (end - begin));
+        //System.out.println(Arrays.toString(array));
+
+    }
+    public void tSort(int[] array) {
+        array = Arrays.copyOf(array,array.length);
+        long begin = System.currentTimeMillis();
+        Arrays.sort(array);
+        long end = System.currentTimeMillis();
+        System.out.println("sort排序：" + (end - begin));
     }
 
 
@@ -58,20 +75,22 @@ public class TestSort {
         /*
           10万个随机数
          */
-        int n = 100_0000;
+        int n = 10_0000;
         int[] array = new int[n];
         Random random = new Random();
         for (int i = 0; i < n; i++) {
             array[i] = random.nextInt(n);
+            //array[i] = i;
         }
 
         TestSort testSort = new TestSort();
         testSort.testBubbleSort(array);
         testSort.testInsertSort(array);
         testSort.testSelectSort(array);
-        //testSort.testQuickSort(array);
+        /*testSort.testQuickSort(array);
+        testSort.tSort(array);
         testSort.testShellSort(array);
-        testSort.testHeapSort(array);
+        testSort.testHeapSort(array);*/
 
 
     }

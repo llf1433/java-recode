@@ -3,7 +3,7 @@ import java.util.Arrays;
  *  选择排序
  *  时间复杂度：O(n^2)
  *  空间复杂度：O(1)
- *  稳定性：稳定
+ *  稳定性：不稳定
  */
 public class SelectSort {
     public static void swap(int[] array, int i, int j) {
@@ -24,6 +24,8 @@ public class SelectSort {
             }
         }
     }
+
+
     public static void main(String[] args) {
         int[] array = new int[]{9,8,7,6,1,0};
         SelectSort.sort(array);
