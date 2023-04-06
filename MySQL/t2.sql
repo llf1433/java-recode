@@ -1,10 +1,13 @@
 -- 商品名称、商品价格、商品库存、商品描述
 create table commodity(
     name varchar(10), -- 商品名
-    price int,      -- 价格
+    price decimal(10,2),      -- 价格
     inventory int,  -- 库存
     `description` text  -- 描述
     );
+insert commodity values('学生背包2', 40.56,101,null); 
+
+
 
 -- Table:teacher
 -- Field:name、age、身高、体重、性别、学历、生日、身份证号
@@ -24,8 +27,10 @@ create table teacher(
 CREATE TABLE book(
     bookname VARCHAR(20), -- 书名 
     author VARCHAR(10), -- 作者
-    price INT, -- 价格
+    price decimal(10,2), -- 价格
     `type` VARCHAR(2) -- 图书分类
 );
+
+insert into book values('Java核心技术','SXXXXXXX',50.69,'计算机技术');
 
 
