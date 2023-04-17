@@ -14,7 +14,6 @@ public class BorrowOperation extends IOperation{
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1,name);
 
-
         ResultSet resultSet = statement.executeQuery();
         if (!resultSet.next()) {
             System.out.println("未找到你要借书");

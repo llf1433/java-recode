@@ -16,12 +16,20 @@ public class DisOperation extends IOperation{
 
         while (resultSet.next()) {
             //next 相当于移动光标,指向下一行 --初始指向第一行之前
-            String name = resultSet.getString("name");
+            String bookName = resultSet.getString("name");
             String author = resultSet.getString("author");
             double price = resultSet.getDouble("price");
             String type = resultSet.getString("type");
-            //int isBorrow = resultSet.getInt("isBorrow");
-            System.out.println("姓名: " + name + "作者: "+ author +" 价格: " + price + "类型: " + type + " ");
+            int isBorrow = resultSet.getInt("isBorrow");
+            String borrow = "未借出";
+            if (isBorrow != 0) {
+                borrow = "已借出";
+            }
+
+            System.out.println("姓名: " + bookName +
+                    "作者: "+ author +
+                    " 价格: " + price +
+                    "类型: " + type + " 状态: " + borrow + " ");
         }
 
         /*

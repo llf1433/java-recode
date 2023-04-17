@@ -1,11 +1,7 @@
 package operations;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
-
-
-
 public class AddOperation extends IOperation{
 
     public void work() throws SQLException {
@@ -47,6 +43,5 @@ public class AddOperation extends IOperation{
             断开连接,释放资源
         */
         statement.close();
-
     }
 }
