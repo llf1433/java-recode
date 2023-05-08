@@ -10,15 +10,17 @@ import java.util.Arrays;
  *  服务器端不停的接收客户端UDP数据报
  */
 public class UdpServer {
-    private static final int PORT = 8888;// 服务器socket绑定的端口号
-
-
-    public static void main(String[] args) throws IOException {
+    // private static final int PORT = 8888;// 服务器socket绑定的端口号
+    DatagramSocket socket = null;
+    public UdpServer(int PORT) throws SocketException {
         /*
            创建服务端DatagramSocket,指定端口
            可以接收和发送UDP数据报
          */
-        DatagramSocket socket = new DatagramSocket(PORT);
+        socket = new DatagramSocket(PORT);
+    }
+
+    public void start() throws IOException {
         // 不断的接收
         while (true){
             /*
@@ -40,10 +42,11 @@ public class UdpServer {
             System.out.printf("客户端发送的原生数据:%s\n", Arrays.toString(packet.getData()));
             System.out.printf("客户端发送的文本数据:%s\n",new String(packet.getData()));
 
-
-
-
         }
+    }
+    public static void main(String[] args) throws IOException {
+        UdpServer server = new UdpServer(8888);// 服务器socket绑定的端口号
+        server.start();
 
     }
 }
