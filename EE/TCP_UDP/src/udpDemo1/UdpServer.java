@@ -42,6 +42,8 @@ public class UdpServer {
             System.out.printf("客户端发送的原生数据:%s\n", Arrays.toString(packet.getData()));
             System.out.printf("客户端发送的文本数据:%s\n",new String(packet.getData()));
 
+
+
         }
     }
     public static void main(String[] args) throws IOException {

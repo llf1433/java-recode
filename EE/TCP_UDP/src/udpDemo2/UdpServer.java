@@ -16,7 +16,6 @@ public class UdpServer {
     public static void main(String[] args) throws IOException {
         // 创建服务端DatagramSocket,指定端口,可以发送和接收udp数据报
         DatagramSocket socket = new DatagramSocket(PORT);
-
         // 不停的接收客户端发送的udp数据报
         while (true) {
             // 创建数据报,用来接收客户端发送的udp数据报
