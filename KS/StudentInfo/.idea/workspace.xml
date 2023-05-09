@@ -4,68 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eb1152a-ecbd-451d-8c13-c3ad7ea8cbd9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_0_4_bin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentInfo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/dao/AdminDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/dao/BaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/dao/ClassDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/dao/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/dao/TeacherDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/model/StudentClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/model/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/model/UserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/util/DbUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/util/StringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/AddStudentClassFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/AddStudentFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/AddTeacherFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/EditPasswordFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/LoginFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/MainFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/ManageClassFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/ManageStudentFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/artisan/view/ManageTeacherFrm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/password.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/userType.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/修改密码.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/关于我们.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/删除.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/学生.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/学生管理.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/密码.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/帮助.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/年龄.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/性别.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/搜索.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/新人课程.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/添加.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/班级介绍.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/班级列表.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/班级名称.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/班级管理.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/用户列表.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/用户名.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/登录.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/确认.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/签到.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/签到列表.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/系统设置.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/老师.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/职称评定.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/课程列表.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/退出.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/重置.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EE/TCP_UDP/src/udpDemo1/UdpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EE/TCP_UDP/src/udpDemo1/UdpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EE/TCP_UDP/src/udpDemo2/UdpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../EE/TCP_UDP/src/udpDemo2/UdpServer.java" afterDir="false" />
-    </list>
+    <list default="true" id="6eb1152a-ecbd-451d-8c13-c3ad7ea8cbd9" name="更改" comment="课设" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,14 +18,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Recode/java-recode/KS/StudentInfo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Recode/java-recode/KS/StudentInfo&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Recode\java-recode\KS\StudentInfo" />
@@ -121,6 +60,18 @@
       <option name="presentableId" value="Default" />
       <updated>1683558090444</updated>
     </task>
+    <task id="LOCAL-00001" summary="课设">
+      <created>1683642485975</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683642485975</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="课设" />
+    <option name="LAST_COMMIT_MESSAGE" value="课设" />
   </component>
 </project>
