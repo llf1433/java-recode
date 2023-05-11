@@ -21,29 +21,45 @@ public class UdpServer {
     }
 
     public void start() throws IOException {
+        System.out.println("服务器启动!");
         // 不断的接收
         while (true){
             /*
                 UPD最多64K,包含UDP首部的8byte
-                1024byte = 1kb, 1024 kb = 1m
+                1024B = 1K, 1024 KB = 1MB
              */
-            byte[] bytes = new byte[1024];
-            DatagramPacket packet = new DatagramPacket(bytes, bytes.length);
-            System.out.println("=============================");
-            System.out.println("等待接收客户端发送的UDP数据报...");
-
+            // 输出型参数,构造空白对象留给receive填充
+            DatagramPacket requestPacket = new DatagramPacket(new byte[4096],4096);
             /*
                 receive 会一直阻塞等待接收客户端发送的UDP数据报
                 接收到UDP数据报之后,DatagramPacket对象就包含了数据(bytes),客户端ip和端口号
              */
-            socket.receive(packet);
-            System.out.printf("客户端ip: %s\n", packet.getAddress().getHostAddress());
+            socket.receive(requestPacket);
+            // DatagramPacket不容易处理,将数据拿出来构造字符串
+            String request = new String(requestPacket.getData(),0,requestPacket.getLength());
+            // 根据请求计算响应
+            String response = process(request);
+
+            // 使用响应数据构造Packet
+            DatagramPacket responsePacket = new DatagramPacket(response.getBytes(),
+                    response.getBytes().length, requestPacket.getSocketAddress());
+            socket.send(responsePacket);// send的参数也是DatagramPacket
+
+            /*System.out.printf("客户端ip: %s\n", packet.getAddress().getHostAddress());
             System.out.printf("客户端端口号:%s\n", packet.getPort());
             System.out.printf("客户端发送的原生数据:%s\n", Arrays.toString(packet.getData()));
-            System.out.printf("客户端发送的文本数据:%s\n",new String(packet.getData()));
-
+            System.out.printf("客户端发送的文本数据:%s\n",new String(packet.getData()));*/
+            // 显示 本次请求的中间处理结果
+            System.out.printf("[%s:%d] request:%s;response:%s\n",requestPacket.getAddress().toString(),
+                    requestPacket.getPort(),request,response);
         }
     }
+
+    private String process(String request) {
+        // 回显字符串
+        return request;
+    }
+
     public static void main(String[] args) throws IOException {
         UdpServer server = new UdpServer(8888);// 服务器socket绑定的端口号
         server.start();
