@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.net.SocketException;
 import java.util.HashMap;
 
-public class UdpDirServer extends UdpServer{
+public class UdpDictServer extends UdpServer{
     HashMap<String,String> dict = new HashMap<>();
 
-    public UdpDirServer(int PORT) throws SocketException {
+    public UdpDictServer(int PORT) throws SocketException {
         super(PORT);
 
         // 设置字典内容
@@ -23,7 +23,7 @@ public class UdpDirServer extends UdpServer{
     }
 
     public static void main(String[] args) throws IOException {
-        UdpServer udpServer = new UdpDirServer(8888);
+        UdpServer udpServer = new UdpDictServer(8888);
         udpServer.start();
     }
 }
