@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
-import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  *  服务器端不停的接收客户端UDP数据报
@@ -12,16 +12,24 @@ import java.util.Arrays;
 public class UdpServer {
     // private static final int PORT = 8888;// 服务器socket绑定的端口号
     DatagramSocket socket = null;
+
+    static HashMap<String,String> dic = null;
+
+
     public UdpServer(int PORT) throws SocketException {
         /*
            创建服务端DatagramSocket,指定端口
            可以接收和发送UDP数据报
          */
         socket = new DatagramSocket(PORT);
+        dic = new HashMap<>();
+        setDic();
+
     }
 
     public void start() throws IOException {
         System.out.println("服务器启动!");
+
         // 不断的接收
         while (true){
             /*
@@ -55,9 +63,22 @@ public class UdpServer {
         }
     }
 
+    /*
     private String process(String request) {
         // 回显字符串
         return request;
+    }
+    */
+
+    private void setDic(){
+        dic.put("cat","猫");
+        dic.put("dog","狗");
+    }
+    private String process(String request) {
+        if (dic.containsKey(request)){
+            return dic.get(request);
+        }
+        return "未收录";
     }
 
     public static void main(String[] args) throws IOException {
