@@ -2,7 +2,6 @@ package udpDemo1;
 
 import java.io.IOException;
 import java.net.*;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UdpClient {
