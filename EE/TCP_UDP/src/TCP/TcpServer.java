@@ -84,7 +84,7 @@ public class TcpServer {
         }
     }
 
-    private String process(String request) {
+    protected String process(String request) {
         // 回显字符串
         return request;
     }
