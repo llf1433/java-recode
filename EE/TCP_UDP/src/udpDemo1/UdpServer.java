@@ -13,7 +13,6 @@ public class UdpServer {
     // private static final int PORT = 8888;// 服务器socket绑定的端口号
     DatagramSocket socket = null;
 
-    static HashMap<String,String> dic = new HashMap<>();;
 
 
     public UdpServer(int PORT) throws SocketException {
@@ -22,7 +21,7 @@ public class UdpServer {
            可以接收和发送UDP数据报
          */
         socket = new DatagramSocket(PORT);
-        setDic(); // 初始化字典
+
     }
 
     public void start() throws IOException {
@@ -61,23 +60,10 @@ public class UdpServer {
         }
     }
 
-    /*
-    private String process(String request) {
+
+    protected String process(String request) {
         // 回显字符串
         return request;
-    }
-    */
-
-    private void setDic(){
-        dic.put("cat","猫");
-        dic.put("dog","狗");
-    }
-    private String process(String request) {
-        // 使用哈希桶实现查询
-        if (dic.containsKey(request)){
-            return dic.get(request);
-        }
-        return "未收录";
     }
 
     public static void main(String[] args) throws IOException {
