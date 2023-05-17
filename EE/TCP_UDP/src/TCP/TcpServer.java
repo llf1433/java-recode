@@ -34,9 +34,7 @@ public class TcpServer {
             */
 
             // 使用线程池
-            threadPool.submit(()->{
-                processConnection(clientSocket);
-            });
+            threadPool.submit(()-> processConnection(clientSocket));
 
         }
     }
@@ -93,5 +91,4 @@ public class TcpServer {
         TcpServer tcpEchoServer = new TcpServer(8868);
         tcpEchoServer.start();
     }
-
 }
