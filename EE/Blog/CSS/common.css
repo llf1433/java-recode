@@ -1,0 +1,34 @@
+/* 去除浏览器默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    /*
+        html是页面的最顶层元素.高度100%(和父元素一样高) 
+        对于来说html的父元素就是浏览器窗口
+        body的父亲是html
+        设为100%就是 body 和 html 一样高
+
+        如果不设置高度,此时元素默认的高度取决内部的内容.
+    */
+    height: 100%;
+}
+
+body {
+    background-image: url(../image/42.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 实现导航栏的样式 */
+. nav {
+    /* 设置和父元素一样宽 */
+    /* 对于块级元素来说,默认width:100% */
+    width: 100%;
+    /* 设置高度是 50px */
+    height: 50px;
+      
+}
