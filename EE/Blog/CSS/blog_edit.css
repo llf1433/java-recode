@@ -1,0 +1,46 @@
+/* 用于博客编辑页面的样式 */
+
+
+.blog-edit-container {
+    width: 1000px;
+    height: calc(100% - 5px);
+    margin: 0 auto;
+}
+
+.blog-edit-container .title {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    width: 895px;
+    height: 40px;  
+    border: none;
+    border-radius: 5px;
+    /* 去掉轮廓线 */
+    outline: none;
+    padding: 5px;
+    font-size: 20px;
+    /* 设置背景色 */
+    background-color: rgba(255,255,255,0.7);
+}
+
+#title:focus {
+    background-color: white;
+}
+
+#submit {
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+}
+
+#submit:active {
+    background-color: gray;
+}
+
