@@ -4,25 +4,243 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>简历</title>
 </head>
+
 <body>
     <h1>鸡哥的简历</h1>
-    <h2>基本信息</h2>
-    <img src="zhiying.jpg" alt="" height="150px">
-    <dr>
-    <style>
-        p{
-            color: red;
-        }
-        .one:hover{
-            color:red;
-            font-size: 100px;
-        }
-    </style>
-    <div class="one">这是一个div</div>    
-    <p>
-        这是一个段落
-    </p>
+    <div>
+        <h2>基本信息</h2>
+        <img src="zhiying.jpg" alt="" height="150px">
+        <p>
+            <span>
+                求职意向:
+            </span>
+            Java 开发工程师
+        </p>
+        <p>
+            <span>联系电话:</span>
+            XXX-XXX-XXX
+        </p>
+        <p>
+            <span>邮箱:</span>
+            xxx.gmail.com
+        </p>
+        <p>
+            <a href="https://github.com">我的 github</a>
+        </p>
+        <p>
+            <a href="https://csdn.com">我的博客</a>
+        </p>
+    </div>
+
+    <!-- 教育背景 -->
+    <div>
+        <h2>教育背景</h2>
+        <ol>
+            <li>1999 - 2002 xxx幼儿园 幼儿园</li>
+            <li>2003 - 2008 xxx小学 小学</li>
+            <li>2009 - 2012 xxx初中 初中</li>
+            <li>2013 - 2015 xxx高中 高中</li>
+            <li>2016 - 2019 xxx大学 计算机专业 本科</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>专业技能</h2>
+        <ul>
+            <li>Java 基础语法扎实，已经刷了 800 道 Leetcode 题；</li>
+            <li>常见数据结构都可以独立实现并熟练应用；</li>
+            <li>熟知计算机网络理论，并且可以独立排查常见问题；</li>
+            <li>掌握 Web 开发能力，并且独立开发了学校的留言墙功能。</li>
+        </ul>
+    </div>
+
+    <!-- 项目 -->
+    <div>
+        <h2>我的项目</h2>
+        <ol>
+            <li>
+                <h3>留言墙</h3>
+                <p>开发时间:2016年9月 到 2016年12月</p>
+                <p>功能介绍：
+                <ul>
+                    <li>支持留言发布</li>
+                    <li>支持匿名留言</li>
+                </ul>
+                </p>
+            </li>
+            <li>
+                <h3>学习小助手</h3>
+                <p>开发时间:2016年9月 到 2016年12月</p>
+                <p>功能介绍：
+                <ul>
+                    <li>支持错题检索</li>
+                    <li>支持同学探讨</li>
+                </ul>
+                </p>
+            </li>
+        </ol>
+    </div>
+
+    <table width="500px" cellspacing="0">
+        <thead>
+            <h3>请填写简历信息</h3>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="name">姓名</label>
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    性别
+                </td>
+                <td>
+                    男</label>
+    
+                    <input type="radio" name="sex" id="male" checked="checked">
+                    <!-- img 要放到 label 内部, 保证点击图标也能选中单选框 -->
+                    <!-- 还需要把 width 加上, 否则图片太大了 -->
+                    <label for="male"><img src="./image/男.png" alt="" width="20px">
+                        <input type="radio" name="sex" id="female">
+                        <label for="female"><img src="./image/女.jpg" alt="" width="20px">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    出生日期
+                </td>
+                <td>
+                    <select>
+                        <option>--请选择年份--</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                    </select>
+                    <select>
+                        <option>--请选择月份--</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <select>
+                        <option>--请选择日期--</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                        <option value="">13</option>
+                        <option value="">14</option>
+    
+                        <option value="">15</option>
+                        <option value="">16</option>
+                        <option value="">17</option>
+                        <option value="">18</option>
+                        <option value="">19</option>
+                        <option value="">20</option>
+                        <option value="">21</option>
+                        <option value="">22</option>
+                        <option value="">23</option>
+                        <option value="">24</option>
+                        <option value="">25</option>
+                        <option value="">26</option>
+                        <option value="">27</option>
+                        <option value="">28</option>
+                        <option value="">29</option>
+                        <option value="">30</option>
+                        <option value="">31</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    就读学校
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    应聘岗位
+                </td>
+                <td>
+                    <input type="checkbox" id="frontend">
+                    <label for="frontend">前端开发</label>
+                    <input type="checkbox" id="backend">
+                    <label for="backend">后端开发</label>
+                    <input type="checkbox" id="qa">
+                    <label for="qa">测试开发</label>
+                    <input type="checkbox" id="op">
+                    <label for="op">运维开发</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    掌握的技能
+                </td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    项目经历
+                </td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" id="lisence">
+                    <label for="lisence">我已仔细阅读过公司的招聘要求</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="#">查看我的状态</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h3>请应聘者确认: </h3>
+                    <ul>
+                        <li>以上信息真实有效</li>
+                        <li>能够尽早去公司实习</li>
+                        <li>能接受公司的加班文化</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
 </body>
 </html>

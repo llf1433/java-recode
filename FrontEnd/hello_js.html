@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+
+    <!-- <div class="box">abc</div> -->
+    <input type="text">
+    <button>隐藏密码</button>
+    <!-- <div id ='one' class = 'light' style = 'font-size: 20px;height: 500px;'> 这是一个div,点击发大字体</div> -->
+    <div id ='one' class = 'light' style = 'font-size: 20px;height: 500px;'> 这是一个div,点击发大字体</div>
+
+    <style>
+        .light {
+            color: black;
+            background-color: white;
+        }
+
+        .dark {
+            color: white;
+            background-color: black;
+        }
+        
+    </style>
+    <script>
+        // let a = 10;
+        // console.log(a);
+        // a = 'hello';
+        // console.log(a);
+        // let div = document.querySelector('.box');
+        // div.onclick = function(){
+        //     console.log(div.innerHTML);
+        //     div.innerHTML += 'a';
+        // }
+
+        let div = document.querySelector('#one');
+        div.onclick = function(){
+            // let fontSize = parseInt(div.style.fontSize);
+            // fontSize += 1;
+            // div.style.fontSize = fontSize + 'px';
+
+            if(div.className == 'dark') {
+                div.className = 'light';
+            } else{
+                div.className = 'dark';
+            }
+        }
+
+        let input = document.querySelector('input');
+        let button = document.querySelector('button');
+        button.onclick = function(){
+            //console.log(input.value);
+            // let val = parseInt(input.value);
+            // val += 1;
+            // input.value = val;
+            if (input.type == 'text'){
+                input.type = 'password';
+                button.innerHTML = '显示密码';
+            } else {
+                input.type = 'text';
+                button.innerHTML = '隐藏密码';
+            }
+        }
+
+       
+
+
+
+
+
+
+
+        function hello() {
+            console.log('hello');
+        }
+
+        let student = {
+            name :  '蔡徐坤',
+            age : 25,
+            sing : function(){
+                console.log('鸡你太美');
+            },
+            dance : function() {
+                console.log('铁三靠');
+            }
+        };
+        
+        hello();
+        student.sing();
+
+    </script>
+
+
+    
+</body>
+</html>
