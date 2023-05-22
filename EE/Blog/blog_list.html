@@ -1,21 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客列表页</title>
     <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/blog_list.css">
 </head>
+
 <body>
     <!-- 导航栏 -->
     <div class="nav">
         <img src="image/logo2.jpg" alt="">
         <span class="title">我的博客系统</span>
+        <!-- 用于占位,将后面元素挤到右边 -->
+        <div class="spacer"></div>
         <a href="#">主页</a>
         <a href="#">写博客</a>
         <a href="#">注销</a>
-        
+
     </div>
+
+    <!-- 页面主体 -->
+    <div class="container">
+        <!-- 左侧信息 -->
+        <div class="container-left">
+            <!-- .card表示用户信息 -->
+            <div class="card">
+                <!-- 用户头像 -->
+                <img src="image/head.jpg" alt="">
+                <!-- 用户名 -->
+                <h3>斯卡蒂</h3>
+                <a href="#">gitee地址</a>
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+
+                <div class="counter">
+                    <span>2</span>
+                    <span>1</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 右侧信息 -->
+        <div class="container-right">
+            <!-- 表示一篇博客 -->
+            <div class="blog">
+                <!-- 博客标题 -->
+                <div class="title">我的第二篇博客</div>
+                <!-- 发布时间 -->
+                <div class="date">2023-05-22</div>
+                <!-- 博客的摘要 -->
+                <div class="desc">
+                    今天起我要... Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias, ipsum suscipit
+                    aperiam a repellendus quis obcaecati eaque, sunt accusamus omnis rem soluta illo iusto nostrum iure.
+                    Ratione, quos molestiae.
+                </div>
+
+                <!-- 查看全文按钮 -->
+                <a href="#">查看全文 &gt;&gt;</a>
+            </div>
+
+            <!-- 表示一篇博客 -->
+            <div class="blog">
+                <!-- 博客标题 -->
+                <div class="title">我的第三篇博客</div>
+                <!-- 发布时间 -->
+                <div class="date">2023-05-22</div>
+                <!-- 博客的摘要 -->
+                <div class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias, ipsum suscipit
+                    aperiam a repellendus quis obcaecati eaque, sunt accusamus omnis rem soluta illo iusto nostrum iure.
+                    Ratione, quos molestiae.
+                </div>
+                <!-- 查看全文按钮 -->
+                <a href="#">查看全文 &gt;&gt;</a>
+            </div>
+
+            <!-- 表示一篇博客 -->
+            <div class="blog">
+                <!-- 博客标题 -->
+                <div class="title">我的第一篇博客</div>
+                <!-- 发布时间 -->
+                <div class="date">2023-05-22</div>
+                <!-- 博客的摘要 -->
+                <div class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias, ipsum suscipit
+                    aperiam a repellendus quis obcaecati eaque, sunt accusamus omnis rem soluta illo iusto nostrum iure.
+                    Ratione, quos molestiae.
+                </div>
+                <!-- 查看全文按钮 -->
+                <a href="#">查看全文 &gt;&gt;</a>
+            </div>
+
+        </div>
+    </div>
+
 </body>
+
 </html>

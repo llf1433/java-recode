@@ -1,9 +1,12 @@
+/* 博客系统通用样式 */
+
 /* 去除浏览器默认样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html,body {
     /*
         html是页面的最顶层元素.高度100%(和父元素一样高) 
@@ -24,11 +27,139 @@ body {
 }
 
 /* 实现导航栏的样式 */
-. nav {
+.nav {
     /* 设置和父元素一样宽 */
     /* 对于块级元素来说,默认width:100% */
     width: 100%;
     /* 设置高度是 50px */
     height: 50px;
-      
+
+    background-color:rgba(50,50,50,0.5);
+    color: white;
+    /* 导航栏里的元素都是水平排列,使用弹性布局设置 */
+    display: flex;
+
+    /* 子元素垂直方向居中 */
+    align-items: center; 
 }
+
+.nav img {
+    width: 40px;
+    height: 40px;
+
+    /* 外边距 */
+    margin-left: 30px;
+    margin-right: 10px;
+
+    /* 让img元素变圆,内切圆半径设置为宽度的一半,就是圆 */
+    border-radius: 50%;
+}
+
+.nav .spacer {
+    width: 70%;
+
+}
+.nav a {
+    /* 元素颜色 */
+    color: white;
+    /* 下划线 */
+    text-decoration: none;
+    /* 让元素相隔,使用内边距,内边距也属于元素内容,使能点击的面积更大 */
+    /* 上下 左右 */
+    padding: 0 10px;  
+}
+
+/* 页面主体样式 */
+.container {
+    /* 主体部分宽度 1200px */
+    width: 1200px;
+    /* 
+        高度填充整个页面 
+        整个页面-导航栏高度
+        calc 可以混合运算 (CSS3) 
+        '-'号两边必须有空格防止解析错误
+    */
+    height: calc(100% - 50px);
+
+    /* 居中 */
+    margin: 0 auto;
+    /* background-color: blue; */
+
+    /* 弹性布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平排列 */
+    justify-content: space-between;
+}
+
+.container-left {
+    /* 尺寸写百分数,是相对于父元素为基准 */
+    height: 100%;
+    width: 300px;
+    /* background-color: red; */
+}
+
+.container-right {
+    /* 尺寸写百分数,是相对于父元素为基准 */
+    height: 100%;
+    /* 留缝 10px */
+    width: 890px; 
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+
+    /* 让此元素带滚动条 */
+    /* 如果溢出带滚动条,不溢出不带 */
+    overflow: auto;
+}
+
+/* 左侧用户信息 */
+.card {
+
+    background-color: rgba(255,255,255,0.7); 
+    /* 设置内边距 */
+    padding: 20px 50px;  
+    /* 内切圆 */
+    border-radius: 10px;
+}
+
+/* 用户头像 */
+.card img{
+    width: 200px;
+    height: 200px;
+    /* 圆形 */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* 用户名 */
+.card h3 {
+    /* 文字水平居中 */
+    text-align: center;
+    /* 设置文字上下边距 */
+    /* 内外边距都可,此处使用内边距 */
+    padding: 10px;
+}
+
+/* 用户gitee链接 */
+.card a {
+    /* a标签是行内元素 */
+    text-align: center;
+    /* 设置成块级元素 */
+    display: block; 
+    color: #777;
+    text-decoration: none;
+
+    padding: 10px;
+}
+
+.card .counter{
+    /* 使用弹性布局使元素水平排列 */
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+
+
+

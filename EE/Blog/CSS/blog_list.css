@@ -1,0 +1,60 @@
+/* 此文件用于 博客列表页实现样式 */
+
+/* 设置整个博客的容器元素的样式 */
+.blog {
+    width: 100%;
+    padding: 20px;
+}
+
+.blog .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.blog .date {
+    text-align: center;
+    /* 可以使用取色器 */
+    color: rgb(15,189,114);
+    
+    padding: 10px;
+}
+
+.blog .desc {
+    text-indent: 2em;
+}
+
+.blog a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    /* 设置水平居中 */
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 设置边框 */
+    border: 3px solid black;
+    
+    /* 让文字水平居中 */
+    text-align: center;
+    /* 让文字垂直居中 */
+    line-height: 50px;
+    /* 去掉下划线 */
+    text-decoration: none;
+    /* 文字颜色 */
+    color: black;
+    /* 圆角矩形 */
+    border-radius: 8px;
+    /* 鼠标悬停效果 */
+    transition: 0.6s;
+
+}
+
+.blog a:hover {
+    color: white;
+    background: gray;
+}
+
+
