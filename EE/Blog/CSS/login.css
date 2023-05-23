@@ -45,6 +45,9 @@
     font-size: 18px;
     padding-left: 10px; 
     border-radius: 5px;
+
+    /* 去掉内边框 */
+    outline: none;
 }
 #submit {
     width: 300px;

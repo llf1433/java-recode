@@ -69,6 +69,11 @@ body {
     padding: 0 10px;  
 }
 
+.nav a:active {
+    /* 鼠标点击 */
+    background-color: grey;
+}
+
 /* 页面主体样式 */
 .container {
     /* 主体部分宽度 1200px */
